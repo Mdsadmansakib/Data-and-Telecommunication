@@ -165,6 +165,14 @@ Every device and service on a network needs a unique identifier. TCP/IP uses **f
 ### 4. Specific Address
 - Combination of IP and Port address.
 - Identifies an **exact process** on a specific device.
+- 
+| Address Type      | Identifies                  | Used By          | Changes During Delivery? |
+|-------------------|-----------------------------|------------------|---------------------------|
+| Physical (MAC)    | Device in a local network   | Data Link Layer  | ✅ Yes                    |
+| Logical (IP)      | Device globally             | Network Layer    | ❌ No                     |
+| Port              | Specific process/service    | Transport Layer  | ❌ No                     |
+| Specific Address  | Combination (IP + Port)     | Application Layer| ❌ No                     |
+
 
 ### Example 2.1
 Two devices with MAC addresses `10` and `87` exchange frames over a LAN. The sender uses `10`, and the receiver uses `87`.
