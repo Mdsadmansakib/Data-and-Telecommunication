@@ -99,6 +99,9 @@ Let me encode the given bit stream with each scheme:
 - All higher harmonics (5 kHz, 7 kHz, etc.) will be increasingly attenuated.
 - This results in a frequency spectrum that is significantly reduced beyond 3 kHz.
 
+![Midterm Exam Screenshot](https://github.com/Mdsadmansakib/Data-and-Telecommunication/blob/main/PYQ/Mid/SS_28.png?raw=true)
+
+
 ### b) A highpass filter with a cutoff frequency of 3KHz
 
 **Time Domain Effect:**
