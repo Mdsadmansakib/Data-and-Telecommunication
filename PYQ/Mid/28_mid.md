@@ -99,7 +99,6 @@ Let me encode the given bit stream with each scheme:
 - All higher harmonics (5 kHz, 7 kHz, etc.) will be increasingly attenuated.
 - This results in a frequency spectrum that is significantly reduced beyond 3 kHz.
 
-![Midterm Exam Screenshot](https://github.com/Mdsadmansakib/Data-and-Telecommunication/blob/main/PYQ/Mid/SS_28.png?raw=true)
 
 
 ### b) A highpass filter with a cutoff frequency of 3KHz
@@ -115,6 +114,9 @@ Let me encode the given bit stream with each scheme:
 - Higher harmonics (5 kHz, 7 kHz, etc.) will pass with less attenuation.
 - This results in a frequency spectrum that is progressively stronger for higher frequencies.
 
+ ![Midterm Exam Screenshot](https://github.com/Mdsadmansakib/Data-and-Telecommunication/blob/main/PYQ/Mid/SS_28.png?raw=true)
+
+ 
 ## Question 6: A signal is transmitted with a voltage level of +5V and -5V using a polar NRZ encoding scheme. If a noise level of -174dBm/Hz and attenuation of 1.5dB affect the signal and cause a voltage drop of 2V, what is the impact on decoding the signal at the receiver?
 
 Original signal levels: +5V and -5V
