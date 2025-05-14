@@ -1,0 +1,13 @@
+
+# Line Coding Scheme Comparison
+
+| **Feature**              | **NRZ-L**                                | **NRZ-I**                                | **Manchester**                                | **Differential Manchester**                   | **AMI**                                       |
+|--------------------------|-------------------------------------------|-------------------------------------------|------------------------------------------------|------------------------------------------------|-----------------------------------------------|
+| **Definition**           | 0 = one level, 1 = another level         | Invert on 1, no change on 0               | 0 = Low-to-High, 1 = High-to-Low               | Always transition mid-bit, and start-of-bit transition for 0 | 1 = alternating ± voltages, 0 = 0V             |
+| **Bit-to-Symbol Ratio (r)** | 1                                       | 1                                         | 0.5                                            | 0.5                                            | 1                                             |
+| **DC Component**         | High (can have DC)                        | High (can have DC)                        | None (balanced transitions)                    | None                                           | None (balanced pulses)                        |
+| **Baseline Wandering**   | High (problematic on long same bits)     | High (problematic on long 0s)             | Immune (transition every bit)                  | Immune                                         | Immune (alternating 1s cancel)                |
+| **Self-Synchronization** | Poor (no transitions in long 0s or 1s)   | Poor (no transitions in long 0s)          | Excellent (transition every bit)               | Excellent (transition every bit)               | Good (transitions on 1s only)                 |
+| **Error Detection**      | Poor                                      | Poor                                      | Moderate                                       | Moderate                                       | Good (pulse violations detectable)            |
+| **Bandwidth Efficiency** | High (narrow bandwidth)                  | High (narrow bandwidth)                   | Low (needs 2x bandwidth)                       | Low (needs 2x bandwidth)                       | Moderate                                      |
+| **Complexity**           | Low                                       | Low                                       | Medium                                         | High                                           | Medium                                        |
