@@ -154,14 +154,55 @@ MLT-3 uses three levels with specific transition rules:
 
 ### P4-9. Find 8-bit data stream from Figure 4.36.
 
-**a. NRZ-I**: Changes represent 1, no change represents 0
+![Figure 4.36 - Problem P4-9](https://github.com/Mdsadmansakib/Data-and-Telecommunication/blob/main/Practice/assets/4.36.png)
+
+**Analysis of each waveform:**
+
+**a. NRZ-I (Non-Return-to-Zero Inverted)**
+- **Rule**: Binary 1 = signal level changes at bit boundary, Binary 0 = no change
+- **Analysis**: Looking at signal transitions at each bit period:
+  - Bit 1: High to Low transition → **1**
+  - Bit 2: Stays Low → **0** 
+  - Bit 3: Low to High transition → **1**
+  - Bit 4: Stays High → **0**
+  - Bit 5: High to Low transition → **1**
+  - Bit 6: Stays Low → **0**
+  - Bit 7: Low to High transition → **1**
+  - Bit 8: Stays High → **0**
 - **Answer: 10101010**
 
-**b. Differential Manchester**: No transition at start = 1, transition at start = 0
-- **Answer: 01010101**  
+**b. Differential Manchester**
+- **Rule**: Binary 0 = transition at beginning of bit period, Binary 1 = no transition at beginning
+- **Analysis**: Looking at transitions at the start of each bit period:
+  - Bit 1: Transition at start → **0**
+  - Bit 2: No transition at start → **1**
+  - Bit 3: Transition at start → **0**
+  - Bit 4: No transition at start → **1**
+  - Bit 5: Transition at start → **0**
+  - Bit 6: No transition at start → **1**
+  - Bit 7: Transition at start → **0**
+  - Bit 8: No transition at start → **1**
+- **Answer: 01010101**
 
-**c. AMI**: Non-zero levels = 1, zero level = 0
+**c. AMI (Alternate Mark Inversion)**
+- **Rule**: Binary 0 = zero voltage, Binary 1 = alternating positive/negative voltage
+- **Analysis**: Looking at signal levels during each bit period:
+  - Bit 1: Positive pulse → **1**
+  - Bit 2: Zero level → **0**
+  - Bit 3: Negative pulse → **1**
+  - Bit 4: Zero level → **0**
+  - Bit 5: Positive pulse → **1**
+  - Bit 6: Zero level → **0**
+  - Bit 7: Negative pulse → **1**
+  - Bit 8: Zero level → **0**
 - **Answer: 10101010**
+
+**Summary:**
+| Line Coding Scheme | 8-bit Data Stream |
+|-------------------|-------------------|
+| NRZ-I             | **10101010**      |
+| Differential Manchester | **01010101** |
+| AMI               | **10101010**      |
 
 ### P4-10. NRZ-I normalized energy calculation.
 Using power spectral density formulas for NRZ-I at 100 Kbps:
